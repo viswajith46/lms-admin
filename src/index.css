@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: #f1f5f9;
+  margin: 0;
+  padding: 0;
+}
+
+/* Smooth scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #334155; border-radius: 2px; }
+
+/* Sidebar transition */
+.sidebar-enter { transform: translateX(-100%); }
+.sidebar-enter-active { transform: translateX(0); transition: transform 300ms ease; }
+
+/* Custom Bootstrap Tooltip - Black background, white text, proper width */
+.tooltip.custom-tooltip .tooltip-inner {
+  background-color: #1f2937 !important; 
+  color: #fff !important;
+  font-size: 12px;
+  padding: 8px 12px;
+  max-width: 400px;
+  text-align: left;
+  border-radius: 6px;
+}
+
+.custom-tooltip .tooltip-arrow::before {
+  border-top-color: #1f2937 !important;
+}
